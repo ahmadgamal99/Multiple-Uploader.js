@@ -1,3 +1,5 @@
+
+
 .multiple-uploader {
     display: flex;
     flex-wrap: wrap;
@@ -5,8 +7,9 @@
     border-radius: 15px;
     border: 2px dashed #858585;
     min-height: 150px;
-    margin: 10px 20px;
+    margin: 20px auto;
     cursor: pointer;
+    width: 80%;
 }
 
 .mup-msg {
