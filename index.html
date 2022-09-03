@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <title>Multiple-Uploader.js</title>
+    <link href="./src/css/main.css" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+
+<form action="/test" method="post" ></form>
+
+<div class="multiple-uploader" id="multiple-uploader">
+    <div class="mup-msg">
+        <span class="mup-main-msg">click to upload images.</span>
+        <span class="mup-msg" id="max-upload-number">Upload up to 10 images</span>
+        <span class="mup-msg">Only images, pdf and psd files are allowed for upload</span>
+    </div>
+</div>
+
+<script src="./src/js/multiple-uploader.js"  ></script>
+<script>
+
+    let multipleUploader = new MultipleUploader().init({
+        maxUpload : 20, // maximum number of uploaded images
+        maxSize:2, // in size in mb
+        filesInpName:'images', // input name sent to backend
+        formSelector: 'form', // form selector you can provide the id of the form ( #myForm )
+    });
+
+</script>
+
+</body>
+</html>
