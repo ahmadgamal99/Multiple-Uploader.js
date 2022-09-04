@@ -7,7 +7,7 @@
 </head>
 <body>
 
-<form action="" method="" enctype="multipart/form-data" ></form>
+<form action="" method="" enctype="multipart/form-data" id="my-form"></form>
 
 <div class="multiple-uploader" id="multiple-uploader">
     <div class="mup-msg">
@@ -20,11 +20,11 @@
 <script src="./src/js/multiple-uploader.js"></script>
 <script>
 
-    let multipleUploader = new MultipleUploader().init({
+    let multipleUploader = new MultipleUploader('#multiple-uploader').init({
         maxUpload : 20, // maximum number of uploaded images
         maxSize:2, // in size in mb
         filesInpName:'images', // input name sent to backend
-        formSelector: 'form', // form selector you can provide the id of the form ( #myForm )
+        formSelector: '#my-form', // form selector
     });
 
 </script>
