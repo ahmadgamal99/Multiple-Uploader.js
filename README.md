@@ -13,8 +13,12 @@ It's fully configurable, can be styled according to your needs.
 After Downloading files just add these lines of code:
 
 ```html
+<head>
+    <link href="./src/css/main.css" rel="stylesheet" type="text/css"> 
+</head>
+<body>
 
-<form action="" method="" enctype="multipart/form-data" ></form>
+<form action="" method="" enctype="multipart/form-data" id="my-form" ></form>
 
 <div class="multiple-uploader" id="multiple-uploader">
   <div class="mup-msg">
@@ -27,16 +31,17 @@ After Downloading files just add these lines of code:
 <script src="./src/js/multiple-uploader.js"></script>
 <script>
 
-  let multipleUploader = new MultipleUploader().init({
-    maxUpload : 20, // maximum number of uploaded images
-    maxSize:2, // size in mega bytes
-    filesInpName:'images', // input name attribute that is sent to backend
-    formSelector: 'form', // form selector, you can provide the id of the form such as #myForm 
-  });
+    let multipleUploader = new MultipleUploader('#multiple-uploader').init({
+        maxUpload : 20, // maximum number of uploaded images
+        maxSize:2, // in size in mb
+        filesInpName:'images', // input name sent to backend
+        formSelector: '#my-form', // form selector
+    });
 
   multipleUploader.clear(); // this function clears all uploaded images
   
 </script>
+</body>
 ```
 
 

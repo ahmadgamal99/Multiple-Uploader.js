@@ -4,9 +4,9 @@ class MultipleUploader {
     #multipleUploader;
     #$imagesUploadInput;
 
-    constructor()
+    constructor( multiUploaderSelector )
     {
-        this.#multipleUploader   = document.getElementById('multiple-uploader');
+        this.#multipleUploader   = document.querySelector(multiUploaderSelector);
         this.#$imagesUploadInput = document.createElement('input')
     }
 
